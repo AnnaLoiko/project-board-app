@@ -1,0 +1,21 @@
+.toolbar {
+    margin: 15px 10px;
+    border: 1px solid black;
+    padding: 10px 15px;
+    display: flex;
+}
+
+.toolbar-search-input {
+    height: 25px;
+    width: 250px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.toolbar-search-button {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    cursor: pointer;
+}
