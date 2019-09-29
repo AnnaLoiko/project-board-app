@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ICardList } from "../../models/CardList";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+// import IUser from 'src/app/models/user';
+import { ICardList } from 'src/app/models/cardList';
 import { ICard } from 'src/app/models/card';
 
 @Component({
@@ -7,16 +8,13 @@ import { ICard } from 'src/app/models/card';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css']
 })
-export class CardListComponent implements OnInit, ICardList {
-  public id: string;
-  public name: string;
-  public cards: ICard[];
-  @Input() card: string;
+export class CardListComponent {
+  @Input() dataItem: ICardList;
+  @Input() isDoneSection: boolean;
+  @Output() expandCard = new EventEmitter<ICard>();
 
-  cardItems: string[] = ["", "", ""];
-  constructor() { }
-
-  ngOnInit() {
+  onExpand(task: ICard) {
+    this.expandCard.emit(task);
   }
 
 }

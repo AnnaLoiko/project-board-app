@@ -9,6 +9,17 @@ import { ToolbarComponent } from './component/toolbar/toolbar.component';
 import { CardListComponent } from './component/card-list/card-list.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { CardItemComponent } from './component/card-list/card-item/card-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {
+  MatButtonModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatListModule,
+  MatCardModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -22,7 +33,15 @@ import { CardItemComponent } from './component/card-list/card-item/card-item.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

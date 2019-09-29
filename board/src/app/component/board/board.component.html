@@ -1,2 +1,12 @@
-<p>NEW board works!</p>
-<app-card-list></app-card-list>
+<div class="board">
+  <app-card-list
+    class="board-item"
+    *ngFor="let dataItem of dataList"
+    [dataItem]="dataItem"
+    (expandCard)="expandCard($event)"
+    ></app-card-list>
+  </div>
+
+
+  <!-- *ngFor="let taskList of dataList"
+  [taskList]="taskList" -->

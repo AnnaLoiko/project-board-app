@@ -1,2 +1,11 @@
-<p>NEW card-list works!</p>
-<app-card-item>NEW</app-card-item>
+
+<h3>{{ dataItem.name }}</h3>
+<app-card-item
+  *ngFor="let item of dataItem.items"
+  [item]="item"
+  [class.done]="isDoneSection===true"
+  (expandCard)="onExpand($event)"
+></app-card-item>
+<button class="card-list-create-card">
+  + Create card
+</button>

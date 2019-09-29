@@ -1,0 +1,19 @@
+li {
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+h4 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.btn-box {
+  text-align: center;
+}
+
+.btn-box button{
+  margin: 0 5px;
+}

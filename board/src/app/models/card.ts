@@ -5,5 +5,5 @@ export interface ICard {
     description: string;
     dueDate?: Date | string;
     assignee?: IUser;
-
+    expanded: boolean;
 }
