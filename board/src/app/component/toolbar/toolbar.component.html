@@ -1,22 +1,11 @@
 <section class="toolbar">
-  <form class="search-form">
-    <input type="text" placeholder="Name" class="toolbar-search-input" />
-    <button mat-button>Search</button>
+  <form class="search-form" (submit)="onSearch()">
+    <input
+      type="text"
+      placeholder="Name"
+      class="toolbar-search-input"
+      name="searchCriterion"
+    />
+    <button mat-button (click)="onSearch()">Search</button>
   </form>
 </section>
-
-
-
-
-<!-- <mat-toolbar class="toolbar">
-      <form class="search-form">
-        <mat-form-field class="form-field">
-          <mat-label>Name</mat-label>
-          <input matInput [(ngModel)]="searchCriterion" name="searchCriterion">
-          <mat-icon matSuffix>Search</mat-icon>
-        </mat-form-field>
-        <button class="search-form-button" type="submit" mat-button mat-stroked-button aria-label="search">
-          Search
-        </button>
-      </form>
-    </mat-toolbar> -->

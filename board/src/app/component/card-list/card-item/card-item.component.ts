@@ -12,10 +12,15 @@ export class CardItemComponent {
   @Input() isDone: boolean;
 
   @Output() expandCard = new EventEmitter<ICard>();
+  @Output() public removeCard = new EventEmitter<ICard>();
 
   onExpand() {
     this.expandCard.emit(this.item);
-    console.log(111, this.item);
+  }
+
+  onRemove() {
+    console.log(1);
+    this.removeCard.emit(this.item);
   }
 
 }

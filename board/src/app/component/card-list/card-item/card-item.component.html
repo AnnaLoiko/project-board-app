@@ -1,6 +1,6 @@
 
 <li (click)="onExpand()">
-  <h4>{{ item.name }}</h4>
+  <h4>{{ item.title }}</h4>
   <ng-container *ngIf="item.expanded===true">
     <p>{{ item.description}}</p>
     <p>{{ item.dueDate}}</p>

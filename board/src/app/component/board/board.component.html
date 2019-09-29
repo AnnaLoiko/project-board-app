@@ -4,9 +4,7 @@
     *ngFor="let dataItem of dataList"
     [dataItem]="dataItem"
     (expandCard)="expandCard($event)"
-    ></app-card-list>
+    (removeCard)="removeCard($event)"
+    [searchCriterion]="searchCriterion"
+  ></app-card-list>
   </div>
-
-
-  <!-- *ngFor="let taskList of dataList"
-  [taskList]="taskList" -->

@@ -11,15 +11,13 @@ import { FooterComponent } from './component/footer/footer.component';
 import { CardItemComponent } from './component/card-list/card-item/card-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { DataListService } from './services/data-list.service';
+
 import {
   MatButtonModule,
-  MatInputModule,
-  MatFormFieldModule,
-  MatIconModule,
-  MatToolbarModule,
-  MatListModule,
-  MatCardModule
 } from '@angular/material';
+
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,21 +27,16 @@ import {
     ToolbarComponent,
     CardListComponent,
     FooterComponent,
-    CardItemComponent
+    CardItemComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatListModule,
-    MatCardModule
   ],
-  providers: [],
+  providers: [DataListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

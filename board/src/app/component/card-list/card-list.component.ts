@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-// import IUser from 'src/app/models/user';
 import { ICardList } from 'src/app/models/cardList';
 import { ICard } from 'src/app/models/card';
 
@@ -11,10 +10,18 @@ import { ICard } from 'src/app/models/card';
 export class CardListComponent {
   @Input() dataItem: ICardList;
   @Input() isDoneSection: boolean;
+  @Input() searchCriterion: string;
   @Output() expandCard = new EventEmitter<ICard>();
+  @Output() removeCard = new EventEmitter<any>();
 
   onExpand(task: ICard) {
     this.expandCard.emit(task);
   }
 
+  onRemove(task: ICard) {
+    this.removeCard.emit({
+      dataItem: this.dataItem,
+      task
+    });
+  }
 }

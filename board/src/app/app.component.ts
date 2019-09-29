@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'board';
+
+  public searchCriterion: string;
+
+  public onSearch(criterion: string) {
+    this.searchCriterion = criterion;
+  }
 }
+
