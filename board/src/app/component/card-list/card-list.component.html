@@ -1,11 +1,11 @@
 
-<h3>{{ dataItem.name }}</h3>
+<h3>{{ dataItem.title }}</h3>
 <app-card-item
   *ngFor="let item of dataItem.items | filter:searchCriterion"
   [item]="item"
-  [class.done]="isDoneSection===true"
   (expandCard)="onExpand($event)"
   (removeCard)="onRemove($event)"
+  [className]="dataItem.isDoneSection === true ? 'done' : ''"
 ></app-card-item>
 <button class="card-list-create-card">
   + Create card

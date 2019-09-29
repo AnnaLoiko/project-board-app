@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -28,13 +28,14 @@ import { FilterPipe } from './pipes/filter.pipe';
     CardListComponent,
     FooterComponent,
     CardItemComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    FormsModule,
   ],
   providers: [DataListService],
   bootstrap: [AppComponent]

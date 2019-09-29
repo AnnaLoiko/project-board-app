@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IUser } from 'src/app/models/user';
 import { ICard } from 'src/app/models/card';
 
 @Component({
@@ -19,7 +18,6 @@ export class CardItemComponent {
   }
 
   onRemove() {
-    console.log(1);
     this.removeCard.emit(this.item);
   }
 

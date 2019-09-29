@@ -11,7 +11,7 @@ export class ToolbarComponent {
 
   @Output() search = new EventEmitter<string>();
 
-  onSearch() {
+  public onSearch() {
     this.search.emit(this.searchCriterion);
   }
 

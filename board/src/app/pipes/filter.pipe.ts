@@ -4,10 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
-
-  transform(value: any, criterion: string): any[] {
-    return criterion
-      ? value.filter((task: { name: string }) => task.name.startsWith(criterion))
+  transform(value: any, searchCriterion: string): any[] {
+    return searchCriterion
+      ? value.filter((task: { title: string }) => task.title.startsWith(searchCriterion))
       : value;
   }
 

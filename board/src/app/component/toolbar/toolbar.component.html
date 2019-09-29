@@ -4,8 +4,9 @@
       type="text"
       placeholder="Name"
       class="toolbar-search-input"
+      [(ngModel)]="searchCriterion"
       name="searchCriterion"
     />
-    <button mat-button (click)="onSearch()">Search</button>
+    <button mat-button type="submit">Search</button>
   </form>
 </section>

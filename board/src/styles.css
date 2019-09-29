@@ -13,3 +13,6 @@ button {
 li {
   list-style: none;
 }
+.done h4 {
+  text-decoration: line-through;
+}

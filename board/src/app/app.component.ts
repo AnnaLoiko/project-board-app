@@ -10,8 +10,8 @@ export class AppComponent {
 
   public searchCriterion: string;
 
-  public onSearch(criterion: string) {
-    this.searchCriterion = criterion;
+  public onSearch(searchCriterion: string) {
+    this.searchCriterion = searchCriterion;
   }
 }
 
