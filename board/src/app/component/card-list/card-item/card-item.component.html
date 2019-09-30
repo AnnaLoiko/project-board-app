@@ -1,9 +1,9 @@
 
-<li (click)="onExpand()">
+<li (click)="onExpand()" appBgCard [item]="item">
   <h4>{{ item.title }}</h4>
   <ng-container *ngIf="item.expanded===true">
     <p>{{ item.description}}</p>
-    <p>{{ item.dueDate}}</p>
+    <p>{{ item.dueDate | date:'medium'}}</p>
     <p>{{ item.Assignee.firstName }} {{ item.Assignee.lastName }}</p>
     <div class="btn-box">
       <button mat-button (click)="onEdit()">Edit</button>

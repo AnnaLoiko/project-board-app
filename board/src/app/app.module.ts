@@ -18,6 +18,7 @@ import {
 } from '@angular/material';
 
 import { FilterPipe } from './pipes/filter.pipe';
+import { BgCardDirective } from './directive/bg-card.directive';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     FooterComponent,
     CardItemComponent,
     FilterPipe,
+    BgCardDirective,
   ],
   imports: [
     BrowserModule,

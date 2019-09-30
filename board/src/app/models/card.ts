@@ -6,4 +6,5 @@ export interface ICard {
     dueDate?: Date | string;
     assignee?: IUser;
     expanded: boolean;
+    isDone: boolean;
 }
